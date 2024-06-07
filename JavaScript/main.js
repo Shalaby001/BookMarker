@@ -6,28 +6,14 @@ var validCard = document.getElementById('validCard');
 var closeValidCardBtn = document.getElementById('closeValidCard');
 
 
-var Sites = JSON.parse(localStorage.getItem('Sites'));
+var Sites = [];
+var storedSites = JSON.parse(localStorage.getItem('Sites'));
+if (storedSites !== null) {
+    Sites.push(...storedSites);
+}
 
 
 displaybookmark();
-
-
-siteName.addEventListener('input', function () {
-    if (siteName.value.trim() === '') {
-        siteName.classList.add('is-invalid');
-    } else {
-        siteName.classList.remove('is-invalid');
-    }
-});
-
-
-siteUrl.addEventListener('input', function () {
-    if (!validateUrl(siteUrl.value)) {
-        siteUrl.classList.add('is-invalid');
-    } else {
-        siteUrl.classList.remove('is-invalid');
-    }
-});
 
 function saveBookmark(e) {
     e.preventDefault();
@@ -52,7 +38,6 @@ function saveBookmark(e) {
 
     displaybookmark();
     clearInput();
-
 
     localStorage.setItem('Sites', JSON.stringify(Sites));
 }
