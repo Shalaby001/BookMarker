@@ -1,0 +1,38 @@
+h1,
+h2 {
+    color: #343a40;
+}
+
+.card {
+    border: none;
+    border-radius: 8px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.table {
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+}
+
+.table-primary {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+#validCard {
+    background-color: rgba(0, 0, 0, 0.7);
+}
